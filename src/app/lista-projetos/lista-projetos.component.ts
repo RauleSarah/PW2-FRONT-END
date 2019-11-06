@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-projetos.component.css']
 })
 export class ListaProjetosComponent implements OnInit {
-
+  projetos  = [{"nome":"Projeto 1","sala":"L08","turma":"2Q"},{"nome":"Projeto 2","sala":"L09","turma":"3Q"}];
   constructor() { }
 
   ngOnInit() {
