@@ -2,11 +2,17 @@
  
   <ul class="navbar-nav">
     <li class="nav-item">
-        <a>Listar Projetos</a>
+        <a routerLink="listaProjetos" routerLinkActive="active" class="nav-link">Listar Projetos</a>
     </li>
     <li class="nav-item">
-      <a>Adicionar Projeto</a>
+      <a routerLink="editarProjeto" routerLinkActive="active" class="nav-link">Editar Projeto</a>
     </li>
+    <li class="nav-item">
+        <a routerLink="detalheProjeto" routerLinkActive="active" class="nav-link">Detalhe projeto</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="novoProjeto" routerLinkActive="active" class="nav-link">Novo projeto</a>
+        </li>
   </ul>
 </nav>
 
@@ -17,8 +23,9 @@
   <hr>
   <div class="card">
     <div class="card-body">
-      
-<has-lista-projetos></has-lista-projetos>
+
+<router-outlet></router-outlet>
+
     </div>
   </div>
 </div>
