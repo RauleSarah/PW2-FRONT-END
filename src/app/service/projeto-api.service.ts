@@ -8,8 +8,8 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProjetoApiService {
-  apiURL: string = "http://quiteriaetec.somee.com/api/"
-
+  // apiURL: string = "http://quiteriaetec.somee.com/api/"
+  apiURL : string = "/proxy/Projetos";
   constructor( private httpClient : HttpClient) { }
   handleError(error) {
     let errorMessage = `Código de erro: ${error.status}\nMensagem:${error.message}`;
@@ -17,7 +17,7 @@ export class ProjetoApiService {
     return throwError(errorMessage);
   }
   getProjetos() : Observable <Projeto[]>{
-    return this.httpClient.get<Projeto[]>(this.apiURL + "Projetos")
+    return this.httpClient.get<Projeto[]>(this.apiURL)
                           .pipe(retry(1),catchError(this.handleError))
   }
 }
