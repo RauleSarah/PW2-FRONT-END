@@ -1,24 +1,24 @@
 <h3>Novo Projeto</h3>
 <div style="width: 400px;">
-  <form>
+  <form class="mt-5" [formGroup]="formProjeto" (ngSubmit)="onSalvar()">
     <div class="form-group">
       <label for="inNome">Nome</label>
-      <input type="text" class="form-control" id="inNome" name="inNome">
+      <input type="text" class="form-control" id="inNome" name="inNome" formControlName="Nome">
     </div>
 
     <div class="form-group">
       <label for="inOrientadores">Orientadores</label>
-      <input type="text" class="form-control" id="inOrientadores" name="inOrientadores">
+      <input type="text" class="form-control" id="inOrientadores" name="inOrientadores" formControlName="Orientadores">
     </div>
 
     <div class="form-group">
         <label for="inSala">Sala</label>
-        <input type="text" class="form-control" id="inSala" name="inSala">
+        <input type="text" class="form-control" id="inSala" name="inSala" formControlName="Sala">
     </div>
 
     <div class="form-group">
         <label for="inTurma">Turma</label>
-        <input type="text" class="form-control" id="inTurma" name="inTurma">
+        <input type="text" class="form-control" id="inTurma" name="inTurma" formControlName="Turma">
     </div>
       
     <button type="submit" class="btn btn-success">Salvar</button>
